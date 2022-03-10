@@ -1,0 +1,37 @@
+.main{
+    font-family: GT Pressura Mono,Roboto Mono,monospace;
+    text-decoration: none;
+    color: #373f3d;
+}
+
+a:link, a:visited, a:active
+{
+    font-family: GT Pressura Mono,Roboto Mono,monospace;
+    color: #373f3d;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+
+.home_slides h1{
+    font-family: Louize Display,Garamond,serif;
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    
+}
+
+.home_slides img{
+    background-size: cover;
+    background-position: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} 
