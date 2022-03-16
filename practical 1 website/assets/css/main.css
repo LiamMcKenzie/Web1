@@ -1,15 +1,38 @@
-body{
-    background:#E0E1DF;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main{
+body{
+    background:#E0E1DF;
+    padding: 50px;
+}
+
+#main{
     color:#53624E
 }
 
+.navbar{
+    position: fixed;
+    background:#E0E1DF;
+    top:0;
+    left: 0;
+    right: 0;
+}
+
 .heading{
-    font-size: 75px;
+    margin-top: 110px;
+    font-size: 70px;
     text-transform: uppercase;
-    text-align: center;   
+    text-align: center;  
+    border-bottom: 1px solid #53624E; 
+    margin-bottom: 40px;
+}
+
+.heading div{
+    border-top:1px solid #53624E;
+    padding: 20px;
 }
 
 .heading div span{
@@ -20,4 +43,38 @@ body{
 .reserve_button,
 .reservations{
     font-size: 14px;
+}
+
+.reserve_button{
+    text-transform: uppercase;
+    color: #E0E1DF;
+    background: #53624E;
+    padding: 20px 30px;
+    display: inline-block;
+    border: 1px solid #53624E;
+}
+
+.reservations ul{
+    list-style: none;
+}
+
+.reservations ul li{
+    padding:30px;
+    border: 1px solid #53624E;
+    text-align: center;
+    position: relative;
+}
+
+.calendar{
+    background: red;
+    position: absolute;
+    height: 100px;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+img{
+    width: 100%;
 }

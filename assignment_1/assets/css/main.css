@@ -19,11 +19,9 @@ a:hover{
 
 .home_slides h1{
     font-family: Louize Display,Garamond,serif;
-    transform: translateY(-50%);
-    font-weight: 400;
+    font-weight: 400;   
     font-size: 40px;
     line-height: 48px;
-    
 }
 
 .home_slides img{
@@ -35,3 +33,9 @@ a:hover{
     right: 0;
     bottom: 0;
 } 
+.home_slides a{
+    border-radius: 2px;
+    padding: 9px 20px 7px;
+    color: #373f3d;
+    border: 2px solid rgba(55,63,61,.2);
+}
