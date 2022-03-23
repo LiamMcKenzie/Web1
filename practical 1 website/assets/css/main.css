@@ -30,6 +30,11 @@ body{
     margin-right: auto;
 }
 
+.menu{
+    font-size: 32px;
+    padding-left: 30px;
+}
+
 .heading{
     margin-top: 110px;
     font-size: 70px;
@@ -91,4 +96,18 @@ body{
 
 img{
     width: 100%;
+}
+
+@media (max-width: 860px){
+    .tree{
+        visibility: hidden;
+    }
+
+    .reservations{
+        display: none;
+    }
+
+    .heading div {
+        font-size: 8vw;
+    }
 }

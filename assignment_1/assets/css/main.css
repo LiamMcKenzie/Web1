@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .main{
     font-family: GT Pressura Mono,Roboto Mono,monospace;
     text-decoration: none;
@@ -15,27 +21,42 @@ a:hover{
     text-decoration: underline;
 }
 
+.home_slides {
+    display: flex;
 
+    align-items: center;
+    justify-content: center;
 
-.home_slides h1{
-    font-family: Louize Display,Garamond,serif;
-    font-weight: 400;   
-    font-size: 40px;
-    line-height: 48px;
 }
 
-.home_slides img{
-    background-size: cover;
-    background-position: 50%;
+.sale_content{
+    display: grid;
+
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-} 
+    
+}
+
+.home_slides h1{
+    justify-self: center;
+    margin-bottom: 20px;
+    font-family: Louize Display,Garamond,serif;
+    font-weight: 400;   
+    font-size: 80px;
+    line-height: 80px;
+}
+
 .home_slides a{
+    justify-self: center;
+    font-size: 16px;
     border-radius: 2px;
     padding: 9px 20px 7px;
     color: #373f3d;
     border: 2px solid rgba(55,63,61,.2);
 }
+
+.home_slides img{
+    object-fit:cover; 
+
+    height: 100%;
+    width: 100%;
+} 
