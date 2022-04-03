@@ -128,7 +128,6 @@ a:hover{
     margin-left: auto;
     margin-right: auto;
 
-    list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -142,6 +141,56 @@ a:hover{
 
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.email_form{
+    margin: 40px;
+}
+
+.about {
+    margin: 40px;
+}
+
+.about p {
+    text-align: center;
+}
+
+.description_text{
+    opacity: .5;
+}
+
+.links{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.links ul{
+    list-style: none;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.links li{
+    text-align: left;
+    
+    display: inline-block;
+
+    position: relative;
+
+}
+
+.copyright{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.copyright p{
+    text-align: center;
+    opacity: .5;
 }
 
 @media (max-width: 600){
