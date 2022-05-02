@@ -24,8 +24,23 @@
 .navbar_header ul{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
     margin-bottom: 40px;
+}
+
+.navbar_logo{
+    grid-row: span 2;
+}
+
+.navbar_collections{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.navbar_link{
+    grid-row: 1;
 }
 
 a:link, a:visited, a:active
