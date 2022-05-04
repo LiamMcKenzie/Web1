@@ -28,6 +28,7 @@
     grid-template-rows: repeat(2, 1fr);
     
     margin-bottom: 40px;
+    
 }
 
 .navbar_logo{
@@ -39,6 +40,7 @@
 .navbar_collections{
     grid-row: span 2;
     grid-column: span 2;
+    padding: 10px;
 }
 
 .navbar_link{
@@ -63,6 +65,12 @@ a:hover{
 .collection_dots{
     width: 100%;
     overflow: hidden;
+}
+
+.navbar_links a{
+    font-size: 16px;
+    color: #373f3d;
+    /*border: 2px solid rgba(55,63,61,.2);*/
 }
 
 .home_slides {
