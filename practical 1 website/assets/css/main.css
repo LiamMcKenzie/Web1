@@ -61,12 +61,33 @@ body{
 }
 
 .reserve_button{
+    position: relative;
     text-transform: uppercase;
-    color: #E0E1DF;
-    background: #53624E;
+    color: var(--main-bg-colour);
+
     padding: 20px 30px;
     display: inline-block;
-    border: 1px solid #53624E;
+    border: 1px solid var(--main-brand-colour);
+    transition: color 0.5s;
+}
+
+.reserve_bg{
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--main-brand-colour);
+    z-index: -1;
+    transition: height 0.5;
+}
+
+.reserve_button:hover .reserve_bg{
+    height: 0;
+}
+
+.reserve_button:hover{
+    color: var(--main-brand-colour);
 }
 
 .reservations ul{
@@ -84,14 +105,38 @@ body{
 }
 
 .calendar{
-    display: none;
-    background: red;
+    padding: 50px;
+    opacity: 0;
+    background: var(--main-bg-colour);
     position: absolute;
-    height: 100px;
-    bottom: -100px;
+    top: 100%;
     left: 0;
     width: 200%;
     z-index: 1;
+    transition: opacity 0.5s linear;
+}
+
+.calendar.active{
+    opacity: 1;
+}
+
+.inner_grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: fit-content;
+    margin: auto;
+}
+
+.inner_grid .square{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_grid .square.disabled{
+    opacity: .5;
 }
 
 img{

@@ -25,7 +25,7 @@
     position: absolute;
     top: 0;
     margin-top: 40px;
-    padding: 0 40px;
+    padding: 0 250px;
     border-collapse: collapse;
 }
 
@@ -36,7 +36,6 @@
     grid-template-rows: repeat(2, 1fr);
     
     margin-bottom: 40px;
-    
     
 }
 .navbar_header li{
@@ -49,6 +48,13 @@
     grid-row: span 2;
     width: 100%;
     height: auto;
+}
+
+.navbar_logo svg{
+    width: 100%;
+    max-height: 60px;
+    height: auto;
+    
 }
 
 .navbar_collections{
@@ -74,6 +80,13 @@ a:hover{
 
 .collection_flex{
     display:flex;
+    opacity: .3;
+    transition: opacity .2s ease;
+}
+
+.collection_flex:hover{
+    opacity: 1;
+    
 }
 
 .collection_dots{
@@ -104,6 +117,12 @@ a:hover{
     
 }
 
+.sale_content a{
+    border: 2px solid rgba(55,63,61,.2);
+    justify-self: center;
+    padding: 9px 20px 7px;
+}
+
 .home_slides{
     position: relative;
 }
@@ -117,21 +136,13 @@ a:hover{
     line-height: 80px;
 }
 
-.home_slides a{
-    justify-self: center;
-    font-size: 16px;
-    border-radius: 2px;
-    padding: 9px 20px 7px;
-    color: #373f3d;
-    
-}
-
 .home_slides img{
     object-fit:cover; 
-
     height: 100%;
     width: 100%;
 } 
+
+
 
 .background_slides{
     display: block;
@@ -139,6 +150,12 @@ a:hover{
 
     height: 1000px;
     width: 100%;
+    transition: opacity .4s ease;
+    opacity: 0;
+}
+
+.background_slides.active{
+    opacity: 1;
 }
 
 .flavor_grid{
@@ -215,6 +232,7 @@ a:hover{
     padding: 20px 0;
     width: 80%;
     text-align: center;
+    background: whitesmoke;
 }
 
 .email_form button{
