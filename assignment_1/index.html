@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/main.css">
-        <script src="assets/js/main.js"></script>
+        
         <title>Swallowtail Tea</title>
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
     </head>
@@ -25,19 +25,19 @@
     
                         <li class="navbar_collections">
                             <div class="collections">
-                                <div class="collection_flex">
+                                <div id="sale_collection" data-index="0" class="collection_flex">
                                     <div>I</div>
                                     <div class="collection_dots">..............................................................................</div>
                                     <div>Sale</div>
                                 </div>
     
-                                <div class="collection_flex active">
+                                <div id="sale_collection" data-index="1" class="collection_flex">
                                     <div>II</div>
                                     <div class="collection_dots">..............................................................................</div>
                                     <div>Wholesale</div>
                                 </div>
     
-                                <div class="collection_flex">
+                                <div id="sale_collection" data-index="2" class="collection_flex">
                                     <div>III</div>
                                     <div class="collection_dots">..............................................................................</div>
                                     <div>Steep</div>
@@ -66,31 +66,30 @@
                     </ul>
                 </div>
 
-                <div class="sale_content">
+                <div class="sale_content active">
                     <h1>Steeped In Passion</h1>
                     <a href="https://swallowtailtea.com/collections/teas">FREE SHIPPING on orders >$40</a>
 
                 </div>
 
-                    <!--
-                <div class="wholesale_content">
+                <div class="sale_content">
                     <h1>Wholesale Program</h1>
                     <a href="">Learn More</a>
                 </div>
 
-                <div class="steep_content">
+                <div class="sale_content">
                     <h1>Bring Swallowtail Home</h1>
                     <a href="">Shop Now</a>
-                </div>-->
+                </div>
 
                 
-                <div class="background_slides" style="background-image: url(assets/img/hero_slide_sale.jpg)">
+                <div data-index="0" class="background_slides active" style="background-image: url(assets/img/hero_slide_sale.jpg)">
 
                 </div>
-                <div class="background_slides active" style="background-image: url(assets/img/hero_slide_wholesale.jpg)">
+                <div data-index="1" class="background_slides" style="background-image: url(assets/img/hero_slide_wholesale.jpg)">
 
                 </div>
-                <div class="background_slides" style="background-image: url(assets/img/hero_slide_steep.jpg)">
+                <div data-index="2" class="background_slides" style="background-image: url(assets/img/hero_slide_steep.jpg)">
 
                 </div>
 
@@ -215,6 +214,7 @@
 
 
         </div> 
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
 

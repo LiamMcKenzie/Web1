@@ -81,7 +81,7 @@ a:hover{
     transition: opacity .2s ease;
 }
 
-.collection_flex:hover{
+.collection_flex.active{
     opacity: 1;
     
 }
@@ -116,7 +116,14 @@ a:hover{
     display: grid;
 
     position: absolute;
+
+    transition: opacity .2s ease;
+    opacity: 0;
     
+}
+
+.sale_content.active{
+    opacity: 1;
 }
 
 .sale_content a{

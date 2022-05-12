@@ -1,0 +1,17 @@
+const BASE_URL = "https://api.unsplash.com/";
+fetch(`${BASE_URL}/search/photos?client_id=jfisuiMFSIiyuAKdw60iD0nIP6hQshWcfN3MROGivv8&query=cats`)
+.then(response => response.json())
+.then(d => {
+  d["results"].forEach(r => {
+    let product = document.createElement("div");
+    product.classList.add("product");
+    product.style.backgroundImage = `url(${r["urls"]["regular"]})`;
+    
+    let product_title = document.createElement("div");
+    product_title.innerHTML = r["alt_description"]
+    product_title.classList.add("product_title");
+    product.append(product_title);
+    
+    document.querySelector(".product_grid").append(product);
+  });
+});
