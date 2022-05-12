@@ -325,16 +325,16 @@ a:hover{
     text-align: center;
     opacity: .5;
 }
-/*
-@media (max-width: 600){
+
+@media (max-width: 600px){
 
     
 
 }
 
-@media (max-width: 800){
+@media (max-width: 800px){
     
-}*/
+}
 
 @media (max-width: 1000px){ /*801px - 1000px*/
     .home_slides h1{
