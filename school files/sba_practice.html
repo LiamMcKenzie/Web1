@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+
+        We are going to build a Rick and Morty 'card game'.
+        Use this API: https://rickandmortyapi.com/api/character
+
+        There is a button called 'Draw Cards' - when clicked, you have to 'draw' 
+        5 cards at random from all the cards available.
+
+        Render the 5 cards to the screen, using the styles provided below.
+        You should create the cards and append them to ".cards" (this is a grid of cards).
+        
+        The structure of a card is:
+        
+        - the card div itself, which contains:
+            - an image of the character
+            - their name
+            - their species
+            - whether they are currently alive of not (displayed as a little green or red icon)
+
+        Your finished project should look like the image in the PDF.
+
+    -->
+
+    <style>
+    
+        .cards{
+            display:grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap:30px;
+            width:fit-content;
+        }
+
+        .card{
+            width:200px;
+            height:300px;
+            background:#333;
+            border-radius:10px;
+            overflow:hidden;
+            color:white;
+            font-family:Arial, Helvetica, sans-serif;
+            display:flex;
+            flex-direction: column;
+        }
+
+        .image{
+            border-radius:10px;
+            margin:10px;
+            height:60%;
+            background-size:contain;
+            background-position: center;
+            background-image:url("https://rickandmortyapi.com/api/character/avatar/1.jpeg");
+        }
+
+        .name, .species{
+            text-align:center;
+        }
+
+        h1.name{                        
+            font-size:14px;            
+        }
+
+        .species{
+            font-size:12px;
+        }
+
+        .aliveDead{
+            width:20px;
+            height:20px;
+            border-radius:100%;      
+            margin:auto 20px 20px auto;  
+        }
+
+        .aliveDead.alive{
+            background:lime;
+        }
+
+        .aliveDead.dead{
+            background:red;
+        }
+
+    </style>
+
+    <button id="drawCards">Draw Cards</button>
+
+    <div class="cards">
+        
+    </div>
+
+    <script>
+
+        let createEl = (type, classes, val => {
+            el.innerHTML = val;
+            return el;
+        })
+
+        let cards = document.querySelector(".cards");
+
+        document.querySelector("#drawCards").addEventListener("click", e => {
+
+            document.querySelectorAll(".card").forEach(c => {
+                c.remove();
+            })
+
+            const BASE_URL = "https://rickandmortyapi.com/api";
+            fetch(`${BASE_URL}/character`)
+            .then(response => response.json())
+            .then(data => {
+                for(let i=0;i<5;i++){
+                    let rand_num = Math.floor(Math.random() * data["results"].length); // 0 // 4
+                    let character = data["results"][rand_num];
+
+                    let card = document.createElement("div");
+                    card.classList.add("card");
+
+                    let image = createEl("div", ["image"],"");
+                    image.style.backgroundImage = `url(${character.image})`;
+
+                    let name = createEl("h1", ["name"], character.name);
+
+                    let species = createEl("div", ["species"], character.species);
+                    let status = character.status == "unknown" ? "alive" : character.status.toLowerCase();
+                    let aliveDead = createEl("div",["aliveDead", status], "");
+
+                    card.append(image, name, species, aliveDead);
+
+                    cards.append(card);
+                    console.log(character);
+                }
+
+                
+            })
+        })
+
+        
+
+
+        
+
+
+    </script>
+
+</body>
+</html>
