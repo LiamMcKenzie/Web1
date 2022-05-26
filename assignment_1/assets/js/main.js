@@ -12,20 +12,6 @@ fetch(`${BASE_URL}/search/photos?client_id=jfisuiMFSIiyuAKdw60iD0nIP6hQshWcfN3MR
     for(i=0;i<3;i++){
       backgrounds[i].style.backgroundImage = `url(${image[i]["urls"]["full"]})`;
     }
-
-    /*
-    let product = document.createElement("div");
-    product.classList.add("product");
-    product.style.backgroundImage = `url(${results["urls"]["regular"]})`;
-    
-    let product_title = document.createElement("div");
-    product_title.innerHTML = results["alt_description"]
-    product_title.classList.add("product_title");
-    product.append(product_title);
-    
-    document.querySelector(".product_grid").append(product);*/
-    console.log(image);
-    
 });
 
 
@@ -40,9 +26,6 @@ collections.forEach((c,i) => {
       c.classList.remove("active");
     })
 
-    c.classList.add("active");
-    console.log(c);
-
     backgrounds.forEach(b => {
       b.classList.remove("active");
     })
@@ -50,7 +33,7 @@ collections.forEach((c,i) => {
     content.forEach(t => {
       t.classList.remove("active");
     })
-
+    c.classList.add("active");
     backgrounds[i].classList.add("active");
     content[i].classList.add("active");
 
@@ -60,3 +43,31 @@ collections.forEach((c,i) => {
     c.classList.remove("active");
   }, false);
 })
+
+
+function startImageTransition(){
+  let cur = backgrounds.length;
+
+  setInterval(changeImage, 5000)
+
+  async function changeImage(){
+    
+    let nextImage = (1 + cur) % backgrounds.length; 
+    
+    
+
+
+    console.log("transition")
+    await transition();
+
+
+
+  }
+
+  
+
+
+  function transition(){
+
+  }
+}

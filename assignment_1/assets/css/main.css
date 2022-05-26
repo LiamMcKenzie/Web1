@@ -319,6 +319,7 @@ a:hover{
 }
 
 .about {
+    display: none;
     margin: 40px;
 }
 
@@ -387,7 +388,7 @@ a:hover{
     }
 
     .about{
-        display: none;
+        display: block;
     }
 
     .email_form_mobile{
@@ -399,3 +400,4 @@ a:hover{
         line-height: 48px;
     }
 }
+
