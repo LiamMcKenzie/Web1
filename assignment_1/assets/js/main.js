@@ -13,9 +13,6 @@ fetch(`${BASE_URL}/search/photos?client_id=jfisuiMFSIiyuAKdw60iD0nIP6hQshWcfN3MR
       backgrounds[i].style.backgroundImage = `url(${image[i]["urls"]["full"]})`;
     }
 
-    
-    
-
     /*
     let product = document.createElement("div");
     product.classList.add("product");
@@ -36,6 +33,7 @@ let collections = document.querySelectorAll(".collection_flex");
 let backgrounds = document.querySelectorAll(".background_slides");
 let content = document.querySelectorAll(".sale_content");
 
+
 collections.forEach((c,i) => {
   c.addEventListener("mouseenter", function( event ) {  
     collections.forEach(c =>{
@@ -45,11 +43,16 @@ collections.forEach((c,i) => {
     c.classList.add("active");
     console.log(c);
 
-    backgrounds.forEach(b =>{
+    backgrounds.forEach(b => {
       b.classList.remove("active");
     })
 
+    content.forEach(t => {
+      t.classList.remove("active");
+    })
+
     backgrounds[i].classList.add("active");
+    content[i].classList.add("active");
 
   }, false);
 
@@ -57,50 +60,3 @@ collections.forEach((c,i) => {
     c.classList.remove("active");
   }, false);
 })
-
-
-
-
-/*
-collection.forEach(c => {
-
-  collection["data-index"].addEventListener("mouseenter", function( event ) {  
-    console.log("enter " + data-index);
-    
-    
-  }, false);
-});*/
-
-/*
-let collection0 = document.querySelector("[data-index='0']");
-let collection1 = document.querySelector("[data-index='1']");
-let collection2 = document.querySelector("[data-index='2']");*/
-
-
-/*
-collection0.addEventListener("mouseenter", function( event ) {  
-  
-  console.log("enter");
-  collection0.classList.add("active");
-  background[0].classList.add("active");
-  background[1].classList.remove("active");
-  background[2].classList.remove("active");
-}, false);
-
-collection1.addEventListener("mouseenter", function( event ) {  
-  console.log("enter");
-  collection1.classList.add("active");
-  background[1].classList.add("active");
-  background[0].classList.remove("active");
-  background[2].classList.remove("active");
-}, false);
-
-collection2.addEventListener("mouseenter", function( event ) {  
-  console.log("enter");
-  collection2.classList.add("active");
-  background[2].classList.add("active");
-  background[1].classList.remove("active");
-  background[0].classList.remove("active");
-}, false);*/
-
-
