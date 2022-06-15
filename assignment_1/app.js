@@ -1,18 +1,13 @@
 const express = require('express')
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
+const index_router = require('./routes/index')
 
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
+app.use("/", index_router)
 app.use(express.static('assets'))
-
-/*
-app.get('/', (req, res) => {
-    //res.send('Hello World!')
-    res.sendFile("index.html")
-  })*/
-
 
 app.get('/', (req, res) => {
     res.render("index")
